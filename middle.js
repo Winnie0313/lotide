@@ -13,25 +13,11 @@ const assertArraysEqual = function(actual, expected) {
 
 };
 
+
 // a function that returns an array with only the middle element(s) of the given array
 // case 1: For arrays with one or two elements, there is no middle. Return an empty array
 // case 2: For arrays with odd number of elements, an array containing a single middle element should be returned.
 // care 3: For arrays with an even number of elements, an array containing the two elements in the middle should be returned
-
-
-////original code
-// const middle = function(arr) {
-//   let middleElement = [];
-//   if (arr.length <= 2) {
-//     return middleElement;
-//   } else if (arr.length % 2 !== 0) {
-//     middleElement = arr.slice((arr.length - 1)/2, (arr.length + 1)/2 );
-//   } else if (arr.length % 2 === 0) {
-//     middleElement = arr.slice((arr.length/2)-1, (arr.length/2) + 1);
-//   }
-//   return middleElement;
-
-// }
 
 // refactor the code
 const middle = function(arr) {
@@ -53,7 +39,6 @@ const middle = function(arr) {
 
 }
 
-
 // Tests
 assertArraysEqual(middle([]), []);
 assertArraysEqual(middle([1]), []);
@@ -62,3 +47,21 @@ assertArraysEqual(middle([1, 2, 3]) , [2]);
 assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
 assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
 assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+
+
+////original code
+// const middle = function(arr) {
+//   let middleElement = [];
+//   if (arr.length <= 2) {
+//     return middleElement;
+//   } else if (arr.length % 2 !== 0) {
+//     middleElement = arr.slice((arr.length - 1)/2, (arr.length + 1)/2 );
+//   } else if (arr.length % 2 === 0) {
+//     middleElement = arr.slice((arr.length/2)-1, (arr.length/2) + 1);
+//   }
+//   return middleElement;
+
+// }
+
+
+
