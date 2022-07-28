@@ -21,20 +21,20 @@ const assertArraysEqual = function(actual, expected) {
 
 // refactor the code
 const middle = function(arr) {
-  console.log("arr is: ", arr);
+  //console.log("arr is: ", arr);
   let middleElement = [];
   const oddLength = arr.length % 2 !== 0;
-  console.log("oddLength is: ", oddLength);
+  //console.log("oddLength is: ", oddLength);
   const startIndex = Math.floor(arr.length/2) - (oddLength ? 0 : 1);
-  console.log("start index is: ", startIndex);
+  //console.log("start index is: ", startIndex);
   const endIndex = startIndex + (oddLength ? 1 : 2);
-  console.log("end index is: ", endIndex);
+  //console.log("end index is: ", endIndex);
   if (arr.length <= 2) {
     return middleElement;
   } else {
     middleElement = arr.slice(startIndex, endIndex);
   }
-  console.log("middle element is: ", middleElement);
+  //console.log("middle element is: ", middleElement);
   return middleElement;
 
 }
@@ -49,7 +49,7 @@ assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
 assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
 
 
-////original code
+//original code
 // const middle = function(arr) {
 //   let middleElement = [];
 //   if (arr.length <= 2) {
@@ -60,7 +60,6 @@ assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
 //     middleElement = arr.slice((arr.length/2)-1, (arr.length/2) + 1);
 //   }
 //   return middleElement;
-
 // }
 
 
