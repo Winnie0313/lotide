@@ -1,10 +1,9 @@
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length){
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
-  }
-  else {
+  } else {
     let object1KeysArray = Object.keys(object1);
     for (let object1Key of object1KeysArray) {
       if (Array.isArray(object1[object1Key])) {
@@ -12,18 +11,16 @@ const eqObjects = function(object1, object2) {
           return false;
         }
       } else if (object1[object1Key] !== object2[object1Key])
-      return false;
+        return false;
     }
     return true;
   }
-
 };
 
 // compare two arrays and returns true of false, based on a perfrct match
 const eqArrays = function(arr1, arr2) {
-  return JSON.stringify(arr1) == JSON.stringify(arr2);
-}
-
+  return JSON.stringify(arr1) === JSON.stringify(arr2);
+};
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
@@ -35,7 +32,7 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-// Test
+// Tests
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 eqObjects(ab, ba); // => true
