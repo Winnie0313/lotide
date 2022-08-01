@@ -2,7 +2,8 @@
 const eqArrays = function(arr1, arr2) {
   return JSON.stringify(arr1) == JSON.stringify(arr2);
 }
-
+ 
+// return a message to tell if two arrays are the same
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
@@ -21,11 +22,7 @@ const without = function (source, itemsToRemove) {
   const sourceCopy = [...source];
   for (let s = 0; s < sourceCopy.length; s++) {
     for (let i = 0; i < itemsToRemove.length; i++) {
-      // debut step 2:
-      //console.log("about to compare:", sourceCopy[s], itemsToRemove[i])
       if (sourceCopy[s] === itemsToRemove[i]) {
-        //debug step 1:
-        //console.log("found an element to delete:", sourceCopy[s], s);
         sourceCopy.splice(s, 1);
       }
     }
