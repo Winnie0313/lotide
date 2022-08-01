@@ -5,12 +5,12 @@ const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
   // iterate each character in the sentence
-
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== " ") {
       if (results[sentence[i]]){
         results[sentence[i]].push(i);
       } else {
+        // if results[sentence[i]], which is the key:value pair, does not exist, create one.
         results[sentence[i]] = [i];
       }
         

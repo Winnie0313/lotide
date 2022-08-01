@@ -18,6 +18,7 @@ const countLetters = function(string) {
   //iterate each character in string
   for (let char of string) {
     //console.log(char);
+    //ignore the empty space
     if (char !== " " ){
       if (result[char]) {
         result[char] += 1;
@@ -49,3 +50,4 @@ assertEqual(result2['s'], 2)
 assertEqual(result2['L'], 2)
 assertEqual(result2['l'], 3)
 assertEqual(result2[' '], undefined)
+assertEqual(result2['!'], 1)
