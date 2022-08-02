@@ -51,3 +51,5 @@ assertEqual(result2['L'], 2)
 assertEqual(result2['l'], 3)
 assertEqual(result2[' '], undefined)
 assertEqual(result2['!'], 1)
+
+module.exports = countLetters;
